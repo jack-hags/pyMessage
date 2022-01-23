@@ -4,7 +4,7 @@ import sys
 import re
 import lyricsgenius
 
-genius = lyricsgenius.Genius("pqu_9c429m_N2wlcBsYUl1CQh8OBZrdCSeJLGJMdbqtB3Ixa2-sWS1c32Al0jTS0")
+genius = lyricsgenius.Genius(GENIUS_TOKEN) # ENTER YOUR GENIUS API TOKEN HERE
 
 # GET SONG
 text = input("Enter a song name. \n The first result will be the song that is played. \n MAKE SURE TO BE SPECIFIC WHEN TYPING THE SONG NAME!")
