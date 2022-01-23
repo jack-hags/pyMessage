@@ -4,10 +4,10 @@ import sys
 import re
 import lyricsgenius
 
-genius = lyricsgenius.Genius(GENIUS_TOKEN) # ENTER YOUR GENIUS API TOKEN HERE
+genius = lyricsgenius.Genius("pqu_9c429m_N2wlcBsYUl1CQh8OBZrdCSeJLGJMdbqtB3Ixa2-sWS1c32Al0jTS0")
 
 # GET SONG
-text = input("Enter a song name. \n The first result will be the song that is played. \n MAKE SURE TO BE SPECIFIC WHEN TYPING THE SONG NAME!")
+text = input("Enter a song name.\nThe first result will be the song that is played.\nMAKE SURE TO BE SPECIFIC WHEN TYPING THE SONG NAME!\n")
 print(text)
 song = genius.search_song(text)
 print("I found a song! Here's the lyrics:"+song.lyrics)
@@ -29,9 +29,9 @@ f.close()
 
 # GET NUMBER
 finalNumber = ""
-num = input("Enter the number you want to send all of these lyrics to. \n Make sure that you type it correctly!")
+num = input("Enter the number you want to send all of these lyrics to.\nMake sure that you type it correctly!\n")
 if num:
-    number = input("Is this number correct: "+num+"\n If it's wrong you won't be able to change it. \n Type (y/n)")
+    number = input("Is this number correct: "+num+"\nIf it's wrong you won't be able to change it.\nType (y/n)\n")
     if number == "y":
         finalNumber = num
         print("Running... Please wait.")
