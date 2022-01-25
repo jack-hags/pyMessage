@@ -4,7 +4,7 @@ import sys
 import re
 import lyricsgenius
 
-genius = lyricsgenius.Genius("pqu_9c429m_N2wlcBsYUl1CQh8OBZrdCSeJLGJMdbqtB3Ixa2-sWS1c32Al0jTS0")
+genius = lyricsgenius.Genius(GENIUS_API_TOKEN)
 
 # GET SONG
 text = input("Enter a song name.\nThe first result will be the song that is played.\nMAKE SURE TO BE SPECIFIC WHEN TYPING THE SONG NAME!\n")
@@ -62,7 +62,6 @@ def send_message(phone_number, message):
 if __name__ == '__main__':
         #words = get_words('ly.txt')
         # for word in words:
-        #send_message('6197516857', word)
         text = get_lines('ly.txt')
         for line in text:
             send_message(finalNumber, line)
